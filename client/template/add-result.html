@@ -1,7 +1,11 @@
 <template name="addresult">
     Add a result!
     <form>
-        <input type="text" name="name" placeholder="Workout Name"/>
+        <select id="workouts" name="workout">
+            {{#each workouts}}
+                <option value="{{name}}">{{name}}</option>
+             {{/each}}
+        </select>
         <input type="number" name="result" placeholder="Time"/>
         <button type="submit"> Add Result </button>
     </form>

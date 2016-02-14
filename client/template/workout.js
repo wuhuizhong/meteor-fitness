@@ -3,6 +3,9 @@
  */
 Template.workout.helpers({
     name: function () {
-        return this._id;
+        return this.name;
+    },
+    description: function() {
+        return this.description;
     }
 });

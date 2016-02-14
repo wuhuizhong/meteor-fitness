@@ -1,8 +1,10 @@
 <template name="workoutList">
     List of workouts
     <div name="list">
-        {{#each workout}}
-            {{> workout}}
-        {{/each}}
+        <ul>
+            {{#each workouts}}
+                {{> workout}}
+            {{/each}}
+        </ul>
     </div>
 </template>
