@@ -1,0 +1,16 @@
+<template name="app">
+    <div name="title">
+    Welcome to Your Fitness Application {{user}}
+    </div>
+    <div name="menu">
+        {{#if user}}
+            <!-- Menu Options -->
+            <a href="{{pathFor 'home'}}">Home</a>
+            <a href="{{pathFor 'addworkout'}}">Add Workout</a>
+            <a href="{{pathFor 'addresult'}}">Add Result</a>
+        {{/if}}
+    </div>
+    <div class="route">
+        {{> yield}}
+    </div>
+</template>

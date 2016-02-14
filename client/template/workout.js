@@ -1,0 +1,8 @@
+/**
+ * Created by Cole on 2/14/16.
+ */
+Template.workout.helpers({
+    name: function () {
+        return this._id;
+    }
+});
