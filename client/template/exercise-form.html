@@ -1,0 +1,11 @@
+<template name="addexercise">
+    <select id="exerciseMovement" name="exercise">
+        {{#each movements}}
+            <option value="{{name}}">{{name}}</option>
+        {{/each}}
+    </select>
+    <input id="exerciseWeight" type="number" name="weight" placeholder="Weight"/>
+    <input id="exerciseReps" type="number" name="reps" placeholder="Repitions"/>
+    <input id="exerciseDistance" type="number" name="distance" placeholder="Distance"/>
+
+</template>
