@@ -7,5 +7,8 @@ Template.workout.helpers({
     },
     description: function() {
         return this.description;
+    },
+    exercises: function() {
+        return this.exercises;
     }
 });

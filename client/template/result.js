@@ -2,10 +2,10 @@
  * Created by Cole on 2/14/16.
  */
 Template.result.helpers({
-    workout: function() {
-        return this.workout;
+    selectedWorkout: function() {
+        return Workouts.findOne(this.workout);
     },
     result: function() {
-        return this.time;
+        return this.result;
     }
 });

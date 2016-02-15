@@ -7,18 +7,18 @@ Template.addresult.events({
 
         /* Maybe use event.target instead of template jquery selection */
         const workout = template.$('[name=workout]').val();
-        const time = template.$('[name=result]').val();
+        const result = template.$('[name=result]').val();
 
         console.log(workout);
 
         Results.insert({
             workout: workout,
             createdAt: new Date(),
-            time: time,
+            result: result,
             athlete: Meteor.userId()
         });
 
-        console.log('Created Event');
+        console.log('Created Event: ' , workout);
 
     }
 });

@@ -1,3 +1,10 @@
 <template name="workout">
     Name: {{name}}, Description: {{description}}
+    <ul>
+        {{#each exercises}}
+            <li>
+            {{>exercise}}
+            </li>
+        {{/each}}
+    </ul>
 </template>
