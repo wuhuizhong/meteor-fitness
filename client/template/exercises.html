@@ -1,3 +1,5 @@
 <template name="exercise">
-    {{movement}} @{{weight}}, {{reps}} reps, for {{distance}}m
+    {{movement}}: {{#if weight}} @{{weight}}lbs,{{/if}}
+    {{#if reps}} {{reps}} reps,{{/if}}
+    {{#if distance}} for {{distance}}m{{/if}}
 </template>
