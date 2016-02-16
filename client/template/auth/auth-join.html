@@ -1,8 +1,22 @@
 <template name="join">
-    <form>
-        <input type="email" name="email" placeholder="Your Email" />
-        <input type="pasword" name="password" placeholder="Password"/>
-        <input type="password" name="confirm" placeholder="Confirm Your Password" />
-        <button type="submit" class="btn-primary">Sing in</button>
-    </form>
+    <div class="page auth">
+        <form>
+            <div class="input-symbol  {{errorClass 'email'}}">
+                <input type="email" name="email" placeholder="Your Email" />
+                <span class="icon-email" title="Your Email"></span>
+            </div>
+
+            <div class="input-symbol  {{errorClass 'password'}}">
+                <input type="password" name="password" placeholder="Password" />
+                <span class="icon-lock" title="Password"></span>
+            </div>
+
+            <div class="input-symbol {{errorClass 'confirm'}}">
+                <input type="password" name="confirm" placeholder="Confirm Password" />
+                <span class="icon-lock" title="Confirm Password"></span>
+            </div>
+
+            <button type="submit" class="btn-primary">Join Now</button>
+        </form>
+    </div>
 </template>

@@ -1,6 +1,9 @@
 <template name="app">
-    <div name="title">
-    Welcome to Your Fitness Application {{user}}
+    <div name="title" class="title">
+    <h1 class="welcome">Welcome to Your Fitness Logging Application</h1>
+        {{#if user}} {{user}} ,
+            <button id="logout">logout</button>
+        {{/if}}
     </div>
     <div name="menu">
         {{#if user}}

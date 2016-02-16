@@ -130,6 +130,8 @@
         <item url="file://$USER_HOME$/.meteor/packages/universe_modules/0.6.8/web.browser/loader.js" />
         <item url="file://$USER_HOME$/.meteor/packages/universe_modules/0.6.8/web.browser/vendor/system.js" />
         <item url="file://$USER_HOME$/.meteor/packages/accounts-base/1.2.2/web.browser/url_client.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/twbs_bootstrap/3.3.6/web.browser/dist/css/bootstrap.css" />
+        <item url="file://$USER_HOME$/.meteor/packages/twbs_bootstrap/3.3.6/web.browser/dist/js/bootstrap.js" />
         <item url="file://$USER_HOME$/.meteor/packages/check/1.1.0/web.browser/match.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ddp-client/1.2.1/web.browser/namespace.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ddp-client/1.2.1/web.browser/stream_client_sockjs.js" />
@@ -283,6 +285,8 @@
       <root url="file://$USER_HOME$/.meteor/packages/universe_modules/0.6.8/web.browser/loader.js" />
       <root url="file://$USER_HOME$/.meteor/packages/universe_modules/0.6.8/web.browser/vendor/system.js" />
       <root url="file://$USER_HOME$/.meteor/packages/accounts-base/1.2.2/web.browser/url_client.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/twbs_bootstrap/3.3.6/web.browser/dist/css/bootstrap.css" />
+      <root url="file://$USER_HOME$/.meteor/packages/twbs_bootstrap/3.3.6/web.browser/dist/js/bootstrap.js" />
       <root url="file://$USER_HOME$/.meteor/packages/check/1.1.0/web.browser/match.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ddp-client/1.2.1/web.browser/namespace.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ddp-client/1.2.1/web.browser/stream_client_sockjs.js" />
