@@ -1,14 +1,24 @@
 .header {
     text-align: center;
+    border-bottom: 1px solid;
 }
 .welcome {
     text-align: center;
+}
+.user {
+    text-align: right;
 }
 .menu {
     position: absolute;
     height: 100%;
     width: 200px;
     overflow: auto;
+    background-color: lightsteelblue;
+    border:1px solid;
+}
+.menu ul {
+    list-style-type: none;
+
 }
 .content {
     position: absolute;

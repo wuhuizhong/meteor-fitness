@@ -1,8 +1,11 @@
 <template name="app">
-    <div name="header" class="page-header">
+    <div name="header" class="header">
         <h1 class="welcome">FitLog</h1>
-        {{#if user}} <div class="user">{{user}}</div>
-            <button id="logout" class="logout">logout</button>
+        {{#if user}}
+            <div class="user col-md-2">{{user}}
+                <button id="logout" class="logout">logout</button>
+            </div>
+
         {{/if}}
     </div>
     <div name="menu" class="menu">
