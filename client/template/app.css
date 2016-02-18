@@ -1,3 +1,16 @@
-.title {
+.header {
     text-align: center;
+}
+.welcome {
+    text-align: center;
+}
+.menu {
+    position: absolute;
+    height: 100%;
+    width: 200px;
+    overflow: auto;
+}
+.content {
+    position: absolute;
+    left: 200px;
 }

@@ -3,7 +3,7 @@
  */
 Session.setDefault('exercises', []);
 Template.addworkout.events({
-    submit: function(event, template) {
+    'submit #addWorkout': function(event, template) {
         event.preventDefault();
 
         const name = template.$("[name=name]").val();
@@ -46,5 +46,8 @@ Template.addworkout.events({
 Template.addworkout.helpers({
     exercises: function() {
         return Session.get('exercises');
+    },
+    newWorkout: function() {
+        return Session.get('isNewWorkout');
     }
 });

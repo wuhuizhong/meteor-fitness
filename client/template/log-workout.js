@@ -24,18 +24,19 @@ Template.logworkout.events({
 
     },
     'change #selectWorkout': function(event, template) {
-        console.log('onchange');
+        // console.log('onchange');
         const workout = template.$('[name=workout]').val();
 
         if (workout === 'New Workout') {
             Session.set('isNewWorkout' , true);
+        } else {
+            Session.set('isNewWorkout' , false);
         }
     }
 });
 
 Template.logworkout.helpers({
-    newWorkout: function(template) {
-
+    newWorkout: function() {
         return Session.get('isNewWorkout');
     },
     workouts : function() {

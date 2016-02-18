@@ -1,6 +1,6 @@
 <template name="addworkout">
     <form>
-        <button name="newWorkout" id="newWorkout">New Workout</button>
+
         <input type="text" name="name" placeholder="Workout Name"/>
         <input type="text" name="description" placeholder="Description"/>
         <select id="score" name="score">
@@ -20,6 +20,8 @@
                 {{> addexercise }}
             <button name="newExercise" id="addExercise">+Exercise</button>
         </div>
-        <button type="submit">Add Workout</button>
+        {{#if newWorkout}}
+        <button type="submit" id="addWorkout">Add Workout</button>
+        {{/if}}
     </form>
 </template>

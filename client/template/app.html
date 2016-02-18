@@ -1,20 +1,30 @@
 <template name="app">
-    <div name="title" class="title">
-    <h1 class="welcome">Welcome to Your Fitness Logging Application</h1>
-        {{#if user}} {{user}} ,
-            <button id="logout">logout</button>
+    <div name="header" class="page-header">
+        <h1 class="welcome">FitLog</h1>
+        {{#if user}} <div class="user">{{user}}</div>
+            <button id="logout" class="logout">logout</button>
         {{/if}}
     </div>
-    <div name="menu">
-        {{#if user}}
-            <!-- Menu Options -->
-            <a href="{{pathFor 'home'}}">Home</a>
-            <a href="{{pathFor 'addworkout'}}">Add WOD</a>
-            <a href="{{pathFor 'logworkout'}}">Log Workout</a>
-            <a href="{{pathFor 'addmovement'}}">Add Movement</a>
-        {{/if}}
+    <div name="menu" class="menu">
+        <ul>
+            {{#if user}}
+                <!-- Menu Options -->
+                <li>
+                    <a href="{{pathFor 'home'}}">Home</a>
+                </li>
+                <li>
+                    <a href="{{pathFor 'addworkout'}}">Add WOD</a>
+                </li>
+                <li>
+                    <a href="{{pathFor 'logworkout'}}">Log Workout</a>
+                </li>
+                <li>
+                    <a href="{{pathFor 'addmovement'}}">Add Movement</a>
+                </li>
+            {{/if}}
+        </ul>
     </div>
-    <div class="route">
+    <div class="route content">
         {{> yield}}
     </div>
 </template>
