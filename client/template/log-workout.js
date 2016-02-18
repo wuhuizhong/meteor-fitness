@@ -1,8 +1,10 @@
 /**
  * Created by Cole on 2/14/16.
  */
-Template.addresult.events({
-    submit: function(event, template) {
+Session.setDefault('isNewWorkout' , false);
+
+Template.logworkout.events({
+    'submit #submitResult': function(event, template) {
         event.preventDefault();
 
         /* Maybe use event.target instead of template jquery selection */
@@ -20,10 +22,22 @@ Template.addresult.events({
 
         console.log('Created Event: ' , workout);
 
+    },
+    'change #selectWorkout': function(event, template) {
+        console.log('onchange');
+        const workout = template.$('[name=workout]').val();
+
+        if (workout === 'New Workout') {
+            Session.set('isNewWorkout' , true);
+        }
     }
 });
 
-Template.addresult.helpers({
+Template.logworkout.helpers({
+    newWorkout: function(template) {
+
+        return Session.get('isNewWorkout');
+    },
     workouts : function() {
         return Workouts.find();
     }
