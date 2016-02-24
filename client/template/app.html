@@ -2,7 +2,7 @@
     <div name="header" class="header">
         <h1 class="welcome">FitLog</h1>
         {{#if user}}
-            <div class="user col-md-2">{{user}}
+            <div class="user">{{user}}
                 <button id="logout" class="logout">logout</button>
             </div>
 
@@ -16,7 +16,7 @@
                     <a href="{{pathFor 'home'}}">Home</a>
                 </li>
                 <li>
-                    <a href="{{pathFor 'addworkout'}}">Add WOD</a>
+                    <a href="{{pathFor 'addworkout'}}">Create Workout</a>
                 </li>
                 <li>
                     <a href="{{pathFor 'logworkout'}}">Log Workout</a>
