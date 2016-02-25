@@ -1,16 +1,20 @@
 <template name="logworkout">
-    Add a result!
+    Log A Workout!
     <form>
-        <select id="selectWorkout" name="workout">
-            {{#each workouts}}
-                <option value="{{_id}}">{{name}}</option>
-             {{/each}}
-                <option value="New Workout">New Workout</option>
-        </select>
+        <div class="workoutSelect">
+            <select id="selectWorkout" name="workout">
+                <option value="New Workout" selected>New Workout</option>
+                {{#each workouts}}
+                    <option value="{{_id}}">{{name}}</option>
+                 {{/each}}
+            </select>
+        </div>
         {{#if newWorkout}}
             {{> workoutForm}}
         {{/if}}
         <input type="number" name="result" placeholder="Result"/>
-        <button type="submit" id="submitResult">Complete</button>
+        <button id="submitResult">Complete</button>
     </form>
+
+    {{diagnostic}}
 </template>

@@ -1,6 +1,6 @@
 <template name="app">
     <div name="header" class="header">
-        <h1 class="welcome">FitLog</h1>
+        <h1 class="welcome">Fitist Log</h1>
         {{#if user}}
             <div class="user">{{user}}
                 <button id="logout" class="logout">logout</button>
@@ -16,7 +16,7 @@
                     <a href="{{pathFor 'home'}}">Home</a>
                 </li>
                 <li>
-                    <a href="{{pathFor 'addworkout'}}">Create Workout</a>
+                    <a href="{{pathFor 'createWorkout'}}">Create Workout</a>
                 </li>
                 <li>
                     <a href="{{pathFor 'logworkout'}}">Log Workout</a>

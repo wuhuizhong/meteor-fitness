@@ -1,14 +1,41 @@
 /**
  * Created by Cole on 2/14/16.
  */
-Session.setDefault('isNewWorkout' , false);
+Session.setDefault('isNewWorkout' , true);
 
 Template.logworkout.events({
-    'submit #submitResult': function(event, template) {
+    'click #submitResult': function(event, template) {
         event.preventDefault();
 
+        console.log('submitting');
+
+        let workout;
+
+        /* Create Workout if new workout selected */
+        if (Session.get('isNewWorkout')) {
+            const name = template.$("[name=name]").val();
+            const description = template.$("[name=description]").val();
+            const score = template.$("[name=score]").val();
+
+            Workouts.insert({
+                name: name,
+                description: description,
+                createdAt: new Date(),
+                exercises: Session.get('exercises'),
+                scoredType: score
+            });
+
+            Session.set('exercises' , []);
+            console.log("Created Workout");
+
+            // Should probably set by id returned by insert
+            workout = Workouts.findOne({name: name});
+
+        } else {
+            const n = template.$('[name=workout]').val();
+            workout = Workouts.findOne({name: n});
+        }
         /* Maybe use event.target instead of template jquery selection */
-        const workout = template.$('[name=workout]').val();
         const result = template.$('[name=result]').val();
 
         console.log(workout);
@@ -20,7 +47,7 @@ Template.logworkout.events({
             athlete: Meteor.userId()
         });
 
-        console.log('Created Event: ' , workout);
+        console.log('Created Result: ' , workout);
 
     },
     'change #selectWorkout': function(event, template) {
@@ -41,5 +68,8 @@ Template.logworkout.helpers({
     },
     workouts : function() {
         return Workouts.find();
+    },
+    diagnostic : function() {
+        return Session.get('exercises');
     }
 });
