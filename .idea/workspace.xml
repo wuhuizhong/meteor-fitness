@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbe3c7c5-5fb9-4ccf-a5d7-2503e1ef7fc4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/template/app.css" afterPath="$PROJECT_DIR$/client/template/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/template/app.html" afterPath="$PROJECT_DIR$/client/template/app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/template/app.js" afterPath="$PROJECT_DIR$/client/template/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="meteor-fitness.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,10 +58,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log-workout.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="log-workout.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/template/log-workout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.116959065">
+            <state vertical-scroll-proportion="0.0">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
@@ -115,15 +112,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="MultiMarkdownFxPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.13015184">
-                <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <first_editor vertical-scroll-proportion="0.29475984">
+                <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -212,10 +209,10 @@
         <option value="$PROJECT_DIR$/client/template/workout-form.js" />
         <option value="$PROJECT_DIR$/client/template/log-workout.js" />
         <option value="$PROJECT_DIR$/client/template/log-workout.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/client/template/app.js" />
         <option value="$PROJECT_DIR$/client/template/app.html" />
         <option value="$PROJECT_DIR$/client/template/app.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -822,12 +819,12 @@
       <workItem from="1455397938721" duration="32145000" />
       <workItem from="1455771062371" duration="7094000" />
       <workItem from="1456291822420" duration="637000" />
-      <workItem from="1456374338164" duration="4691000" />
+      <workItem from="1456374338164" duration="4995000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44567000" />
+    <option name="totallyTimeSpent" value="44871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="979" height="829" extended-state="0" />
@@ -1214,20 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.13015184">
-            <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/lib/jquery.touchwipe.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1264,11 +1247,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/template/log-workout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.116959065">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.29475984">
+            <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
