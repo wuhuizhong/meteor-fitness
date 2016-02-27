@@ -17,7 +17,7 @@ Template.join.helpers({
 });
 
 Template.join.events({
-        'submit': function(event , template) {
+        'submit #join': function(event , template) {
             event.preventDefault();
 
             var email = template.$('[name=email]').val();

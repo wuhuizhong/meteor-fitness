@@ -39,6 +39,7 @@
 .content {
     position: absolute;
     left: 10px;
+    width: 100%;
 }
 
 .menuShowing {

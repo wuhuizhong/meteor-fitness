@@ -18,7 +18,7 @@ Template.login.helpers({
 });
 
 Template.login.events({
-    'click button': function(event, template) {
+    'click #signIn': function(event, template) {
         event.preventDefault();
 
         var email = template.$('[name=email]').val();
@@ -46,6 +46,9 @@ Template.login.events({
         });
 
         Router.go('home');
+    },
+    'click #joinRedirect': function(event) {
+        Router.go('/join');
     },
     'blur input': function(event, template) {
         /* Style Selections and Helpers, keeps Titles above */

@@ -1,32 +1,37 @@
 <template name="app">
+    {{#if user}}
     <div name="header" class="header">
         <h1 class="welcome">Fitist Log</h1>
-        {{#if user}}
             <div class="user">{{user}}
                 <button id="logout" class="logout">logout</button>
             </div>
-
-        {{/if}}
     </div>
     <div name="menu" class="menu {{menuOpen}}">
         <ul>
-            {{#if user}}
                 <!-- Menu Options -->
                 <li>
-                    <a href="{{pathFor 'home'}}">Home</a>
+                    <button id="goHome" type="button">
+                        Home
+                    </button>
                 </li>
                 <li>
-                    <a href="{{pathFor 'logworkout'}}">Log Workout</a>
+                    <button id="goLogWorkout">
+                        Log Workout
+                    </button>
                 </li>
                 <li>
-                    <a href="{{pathFor 'createWorkout'}}">Create Workout</a>
+                    <button id="goCreateWorkout">
+                        Create Workout
+                    </button>
                 </li>
                 <li>
-                    <a href="{{pathFor 'addmovement'}}">Add Movement</a>
+                    <button id="goAddMovement">
+                        Add Movement
+                    </button>
                 </li>
-            {{/if}}
         </ul>
     </div>
+    {{/if}}
     <div class="route content {{menuShowing}}">
         {{> yield}}
     </div>

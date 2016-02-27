@@ -1,5 +1,8 @@
 <template name="login">
     <div class="page auth">
+        <div class="hGroup">
+            <h1>Use Fittest, Get Fitter</h1>
+        </div>
         <form>
             <div class="input-symbol  {{errorClass 'email'}} group">
                 <input type="email" name="email"/>
@@ -12,11 +15,11 @@
                 <span class="highlight"></span><span class="bar"></span>
                 <label class="">Password</label>
             </div>
-            <button type="button" class="button buttonBlue">Sign In
+            <button type="button" id="signIn" class="button buttonBlue">Sign In
                 <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
             </button>
-            <button type="button" class="button buttonBlue">
-                <a href="{{pathFor 'join'}}" class="link-auth-alt">Join</a>
+            <button type="button" id="joinRedirect" class="button buttonBlue">
+                Join
             </button>
         </form>
     </div>

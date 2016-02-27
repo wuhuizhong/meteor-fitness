@@ -1,22 +1,30 @@
 <template name="join">
     <div class="page auth">
+        <div class="hGroup">
+            <h1>Join Fittest, Get Fitter</h1>
+        </div>
         <form>
-            <div class="input-symbol  {{errorClass 'email'}}">
-                <input type="email" name="email" placeholder="Your Email" />
-                <span class="icon-email" title="Your Email"></span>
+            <div class="input-symbol  {{errorClass 'email'}} group">
+                <input type="email" name="email"/>
+                <span class="highlight"></span><span class="bar"></span>
+                <label class="">Email</label>
             </div>
 
-            <div class="input-symbol  {{errorClass 'password'}}">
-                <input type="password" name="password" placeholder="Password" />
-                <span class="icon-lock" title="Password"></span>
+            <div class="input-symbol  {{errorClass 'password'}} group">
+                <input type="password" name="password"/>
+                <span class="highlight"></span><span class="bar"></span>
+                <label class="">Password</label>
             </div>
 
-            <div class="input-symbol {{errorClass 'confirm'}}">
-                <input type="password" name="confirm" placeholder="Confirm Password" />
-                <span class="icon-lock" title="Confirm Password"></span>
+            <div class="input-symbol  {{errorClass 'password'}} group">
+                <input type="password" name="confirm"/>
+                <span class="highlight"></span><span class="bar"></span>
+                <label class="">Confirm Password</label>
             </div>
 
-            <button type="submit" class="btn-primary">Join Now</button>
+            <button type="button" id="join" class="button buttonBlue">Join
+                <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+            </button>
         </form>
     </div>
 </template>

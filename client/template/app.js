@@ -1,7 +1,7 @@
 /**
  * Created by Cole on 2/14/16.
  */
-Session.setDefault('SHOW_MENU' , true);
+Session.setDefault('SHOW_MENU' , false);
 
 Meteor.startup(function () {
     // set up a swipe left / right handler
@@ -20,14 +20,17 @@ Template.app.helpers({
         return Meteor.user().emails[0].address;
     },
     menuOpen: function() {
-        if (Session.get('SHOW_MENU')) {
+        let routeName = Router.current().route.getName();
+
+        if (Session.get('SHOW_MENU') ) {
             return 'showMenu';
         } else {
             return false;
         }
     },
     menuShowing: function() {
-        if (Session.get('SHOW_MENU')) {
+
+        if (Session.get('SHOW_MENU') ) {
             return 'menuShowing';
         } else {
             return false;
@@ -39,5 +42,17 @@ Template.app.events({
         Meteor.logout();
 
         Router.go('login');
+    },
+    'click #goHome': function(event) {
+        Router.go('home');
+    },
+    'click #goLogWorkout': function(event) {
+        Router.go('logworkout');
+    },
+    'click #goCreateWorkout': function(event) {
+        Router.go('createworkout');
+    },
+    'click #goAddMovement': function(event) {
+        Router.go('addmovement');
     }
 });
