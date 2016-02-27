@@ -18,7 +18,7 @@ Template.login.helpers({
 });
 
 Template.login.events({
-    submit: function(event, template) {
+    'click button': function(event, template) {
         event.preventDefault();
 
         var email = template.$('[name=email]').val();
@@ -46,5 +46,40 @@ Template.login.events({
         });
 
         Router.go('home');
+    },
+    'blur input': function(event, template) {
+        /* Style Selections and Helpers, keeps Titles above */
+
+        let that = $(event.target);
+
+        if (that.val()) {
+            that.addClass('used');
+        } else {
+            that.removeClass('used');
+        }
+    },
+    'click .ripples': function(event) {
+
+        console.log('Ripples');
+
+        let that = $(event.target);
+        let offset = that.parent().offset();
+        let circle = that.find('.ripplesCircle');
+
+        let x = event.pageX - offset.left;
+        let y = event.pageY - offset.top;
+
+        circle.css({
+            top: y + 'px',
+            left: x + 'px'
+        });
+
+        that.addClass('is-active');
+    },
+    '.ripples webkitAnimationEnd': function(event) {
+        let that = $(event.target);
+        that.removeClass('is-active');
     }
 });
+
+/* Style Selections and Helpers */

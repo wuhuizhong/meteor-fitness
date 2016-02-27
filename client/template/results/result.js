@@ -7,5 +7,8 @@ Template.result.helpers({
     },
     result: function() {
         return this.result;
+    },
+    diagnostic: function() {
+        return this;
     }
 });
