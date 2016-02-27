@@ -17,7 +17,7 @@ Meteor.startup(function () {
 });
 Template.app.helpers({
     user: function () {
-        return Meteor.user().emails[0].address;
+        return Meteor.user();
     },
     menuOpen: function() {
         let routeName = Router.current().route.getName();
