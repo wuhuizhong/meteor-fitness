@@ -3,6 +3,6 @@
  */
 Template.workoutList.helpers({
    workouts: function() {
-       return Workouts.find({ userId});
+       return Workouts.find({ userId: Meteor.userId() });
    }
 });

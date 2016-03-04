@@ -1,11 +1,13 @@
 <template name="resultList">
     Workout Log
-    <ul>
-        {{#each results}}
-            <li>
-            {{> result}}
-            </li>
-        {{/each}}
-    </ul>
+    <div class="resultList">
+        <ul>
+            {{#each results}}
+                <li>
+                    {{> result}}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
 
 </template>

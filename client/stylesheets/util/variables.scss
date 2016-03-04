@@ -1,2 +1,10 @@
 $font-stack: Helvetica, sans-serif;
 $font-color: #636363;
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
