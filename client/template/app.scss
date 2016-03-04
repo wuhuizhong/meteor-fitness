@@ -5,8 +5,9 @@
     position: absolute;
     height: 100%;
     overflow: auto;
-    background-color: lightsteelblue;
+    background-color: #000000;
     border:1px solid;
+    left: 0px;
 
     .mobile {
       float: bottom;
@@ -21,9 +22,7 @@
 
   .content {
 
-    .desktop {
-      left: 200px;
-    }
+    left: 200px;
 
     .mobile {
       left: 0px;
