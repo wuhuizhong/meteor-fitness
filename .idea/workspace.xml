@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbe3c7c5-5fb9-4ccf-a5d7-2503e1ef7fc4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/util/variables.scss" afterPath="$PROJECT_DIR$/client/stylesheets/util/variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/template/results/result-list.html" afterPath="$PROJECT_DIR$/client/template/results/result-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/util/nav.button.scss" afterPath="$PROJECT_DIR$/client/stylesheets/util/nav.button.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/template/app.scss" afterPath="$PROJECT_DIR$/client/template/app.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/template/results/result.html" afterPath="$PROJECT_DIR$/client/template/results/result.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/template/results/result.js" afterPath="$PROJECT_DIR$/client/template/results/result.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/template/workouts/workout-list.js" afterPath="$PROJECT_DIR$/client/template/workouts/workout-list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/template/results/result.scss" afterPath="$PROJECT_DIR$/client/template/results/result.scss" />
     </list>
     <ignored path="meteor-fitness.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,18 +34,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/template/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#38#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="workout-list.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/template/workouts/workout-list.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -91,18 +77,18 @@
       <file leaf-file-name="result.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/template/results/result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125">
-              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="result.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/template/results/result.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5113636">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state vertical-scroll-proportion="-11.875">
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -121,8 +107,18 @@
       <file leaf-file-name="app.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/template/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.625">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state vertical-scroll-proportion="-3.9583333">
+              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.button.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/stylesheets/util/nav.button.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.23863636">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -204,8 +200,6 @@
         <option value="$PROJECT_DIR$/client/template/workouts/add-workout.js" />
         <option value="$PROJECT_DIR$/client/template/app.html" />
         <option value="$PROJECT_DIR$/client/template/home.html" />
-        <option value="$PROJECT_DIR$/client/stylesheets/util/nav.button.scss" />
-        <option value="$PROJECT_DIR$/client/template/app.scss" />
         <option value="$PROJECT_DIR$/client/template/app.js" />
         <option value="$PROJECT_DIR$/client/template/workouts/workout-list.js" />
         <option value="$PROJECT_DIR$/client/template/results/result.js" />
@@ -213,6 +207,8 @@
         <option value="$PROJECT_DIR$/client/stylesheets/util/variables.scss" />
         <option value="$PROJECT_DIR$/client/template/results/result.html" />
         <option value="$PROJECT_DIR$/client/template/results/result.scss" />
+        <option value="$PROJECT_DIR$/client/template/app.scss" />
+        <option value="$PROJECT_DIR$/client/stylesheets/util/nav.button.scss" />
       </list>
     </option>
   </component>
@@ -904,12 +900,12 @@
       <workItem from="1456430204969" duration="126000" />
       <workItem from="1456463170551" duration="180000" />
       <workItem from="1456543284289" duration="9649000" />
-      <workItem from="1457062890762" duration="9722000" />
+      <workItem from="1457062890762" duration="10668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65653000" />
+    <option name="totallyTimeSpent" value="66599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="490" y="23" width="950" height="830" extended-state="0" />
@@ -1254,14 +1250,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/stylesheets/util/nav.button.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/template/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1296,26 +1284,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/template/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/template/auth/auth.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
           <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/stylesheets/util/variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1328,18 +1300,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/stylesheets/util/variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/template/results/result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/template/results/result.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5113636">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/template/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9583333">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/stylesheets/util/nav.button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23863636">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding />
         </state>
       </provider>

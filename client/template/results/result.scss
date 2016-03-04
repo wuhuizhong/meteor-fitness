@@ -4,6 +4,7 @@
 
 .resultList {
 
+
   ul {
     list-style: none;
     margin: 0;
@@ -14,7 +15,15 @@
   }
   .result {
     margin-bottom: .5em;
-    background-color: royalblue;
-    @include border-radius(3px);
+    @include border-radius(5px);
   }
+}
+
+.workoutIcon {
+  float: left;
+  text-align: center;
+  width: 2em;
+  font-size: 1.2em;
+  color: white;
+  background-color: royalblue;
 }
