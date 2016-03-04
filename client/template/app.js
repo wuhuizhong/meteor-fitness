@@ -1,7 +1,7 @@
 /**
  * Created by Cole on 2/14/16.
  */
-Session.setDefault('SHOW_MENU' , false);
+Session.setDefault('SHOW_MENU' , true);
 
 Meteor.startup(function () {
     // set up a swipe left / right handler
@@ -16,34 +16,14 @@ Meteor.startup(function () {
         },
         preventDefaultEvents: false
     });
+
+    if (Meteor.isCordova) {
+        Session.set('SHOW_MENU' , false);
+    }
 });
 Template.app.helpers({
     user: function () {
         return Meteor.user();
-    },
-    menuOpen: function() {
-        let routeName = Router.current().route.getName();
-
-        if (Session.get('SHOW_MENU') ) {
-            return 'showMenu';
-        } else {
-            return false;
-        }
-    },
-    menuShowing: function() {
-
-        if (Session.get('SHOW_MENU') ) {
-            return 'menuShowing';
-        } else {
-            return false;
-        }
-    },
-    isMobile: function() {
-        if (Meteor.isCordova) {
-            return 'mobile';
-        } else {
-            return 'desktop';
-        }
     }
 });
 Template.app.events({

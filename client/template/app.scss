@@ -1,33 +1,45 @@
+@import '../stylesheets/util/variables';
+@import '../stylesheets/util/nav.button';
+
 .mainApp {
+
+  color: $font-color;
+  font: $font-stack;
 
   .menu {
 
-    position: absolute;
-    height: 100%;
-    overflow: auto;
-    background-color: #000000;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    background-color: #1c1c1e;
     border:1px solid;
-    left: 0px;
+    width: 100%;
 
-    .mobile {
-      float: bottom;
-      height: 50px;
+    ul {
+      text-align: center;
+      padding: 0px;
+      margin: 0px;
+      li {
+        margin: 0;
+        padding: 0;
+
+        button {
+          @extend %nav-button;
+        }
+        display: inline;
+        margin: -4px;
+        width: 25%;
+      }
     }
-
-    .desktop {
-      width: 200px;
-    }
-
   }
 
   .content {
 
-    left: 200px;
+    position: absolute;
+    margin-bottom: 60px;
+    overflow-x: auto;
+    width: 100%;
 
-    .mobile {
-      left: 0px;
-      margin-left: 2em;
-    }
   }
 
 }

@@ -1,12 +1,18 @@
 <template name="home">
-    Welcome home {{user}}
-    <div class="resultList">
-        {{> resultList}}
-    </div>
-    <div class="workoutList">
-        {{> workoutList}}
-    </div>
-    <div class="movementList">
-        {{> movementList}}
+    <div class="container-fluid">
+        <div class="row navHeader">
+            Home
+        </div>
+        <div class="row">
+            <div class="resultList col-md-4">
+                {{> resultList}}
+            </div>
+            <div class="workoutList col-md-4">
+                {{> workoutList}}
+            </div>
+            <div class="movementList col-md-4">
+                {{> movementList}}
+            </div>
+        </div>
     </div>
 </template>

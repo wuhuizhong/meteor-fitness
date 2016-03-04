@@ -1,39 +1,39 @@
-<template name="app" class="mainApp">
-    {{user}}
-    {{#if user}}
-    <div name="header" class="header">
-        <h1 class="welcome">Fitist Log</h1>
-            <div class="user">{{user}}
-                <button id="logout" class="logout">logout</button>
-            </div>
-    </div>
-    <div name="menu" class="menu {{menuOpen}} {{isMobile}}">
-        <ul>
+<template name="app">
+    <div class="mainApp">
+        {{#if user}}
+        <div name="header" class="header">
+            <h1 class="welcome">Fitist Log</h1>
+                <div class="user">{{user}}
+                    <button id="logout" class="logout">logout</button>
+                </div>
+        </div>
+        {{/if}}
+        <div class="content {{menuShowing}}">
+            {{> yield}}
+        </div>
+        {{#if user}}
+        <div name="menu" class="menu">
+            <ul>
                 <!-- Menu Options -->
                 <li>
                     <button id="goHome" type="button">
-                        Home
+                        <i class="fa fa-home"></i>
                     </button>
-                </li>
-                <li>
+                </li><li>
                     <button id="goLogWorkout">
-                        Log Workout
+                        <i class="fa fa-plus">W</i>
                     </button>
-                </li>
-                <li>
+                </li><li>
                     <button id="goCreateWorkout">
-                        Create Workout
+                         <i class="fa fa-pencil-square-o"></i>
                     </button>
-                </li>
-                <li>
+                </li><li>
                     <button id="goAddMovement">
-                        Add Movement
+                        <i class="fa fa-plus">M</i>
                     </button>
                 </li>
-        </ul>
-    </div>
-    {{/if}}
-    <div class="content">
-        {{> yield}}
+            </ul>
+        </div>
+        {{/if}}
     </div>
 </template>

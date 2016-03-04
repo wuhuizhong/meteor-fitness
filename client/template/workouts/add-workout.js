@@ -2,7 +2,7 @@
  * Created by Cole on 2/14/16.
  */
 Session.setDefault('exercises', []);
-Template.createWorkout.events({
+Template.createworkout.events({
     'submit #addWorkout': function(event, template) {
         event.preventDefault();
 
@@ -44,7 +44,7 @@ Template.createWorkout.events({
     }
 });
 
-Template.createWorkout.helpers({
+Template.createworkout.helpers({
     exercises: function() {
         return Session.get('exercises');
     },
