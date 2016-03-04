@@ -1,0 +1,34 @@
+.mainApp {
+
+  .menu {
+
+    position: absolute;
+    height: 100%;
+    overflow: auto;
+    background-color: lightsteelblue;
+    border:1px solid;
+
+    .mobile {
+      float: bottom;
+      height: 50px;
+    }
+
+    .desktop {
+      width: 200px;
+    }
+
+  }
+
+  .content {
+
+    .desktop {
+      left: 200px;
+    }
+
+    .mobile {
+      left: 0px;
+      margin-left: 2em;
+    }
+  }
+
+}

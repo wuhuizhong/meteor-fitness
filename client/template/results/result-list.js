@@ -3,6 +3,6 @@
  */
 Template.resultList.helpers({
     results: function() {
-        return Results.find({} , {sort: {createdAt: -1}});
+        return Results.find({ athlete: Meteor.userId() } , {sort: {createdAt: -1}});
     }
 });

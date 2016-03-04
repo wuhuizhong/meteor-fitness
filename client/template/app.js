@@ -10,7 +10,9 @@ Meteor.startup(function () {
             Session.set('SHOW_MENU', false);
         },
         wipeRight: function () {
-            Session.set('SHOW_MENU', true);
+            if (Meteor.user()) {
+                Session.set('SHOW_MENU', true);
+            }
         },
         preventDefaultEvents: false
     });
@@ -34,6 +36,13 @@ Template.app.helpers({
             return 'menuShowing';
         } else {
             return false;
+        }
+    },
+    isMobile: function() {
+        if (Meteor.isCordova) {
+            return 'mobile';
+        } else {
+            return 'desktop';
         }
     }
 });

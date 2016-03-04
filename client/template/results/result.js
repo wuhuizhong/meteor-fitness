@@ -3,12 +3,12 @@
  */
 Template.result.helpers({
     selectedWorkout: function() {
-        return Workouts.findOne(this.workout);
+        return this.result.workout;
     },
     result: function() {
         return this.result;
     },
     diagnostic: function() {
-        return this;
+        return JSON.stringify(this);
     }
 });

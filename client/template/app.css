@@ -9,28 +9,6 @@
     width: 100%;
     text-align: right;
 }
-.menu {
-    position: absolute;
-    width: 10px;
-    height: 100%;
-    overflow: auto;
-    background-color: lightsteelblue;
-    border:1px solid;
-}
-
-.showMenu {
-    width: 200px;
-}
-
-/*
-.menu .false {
-    position: absolute;
-    height: 100%;
-    width: 10px;
-    background-color: lightblue;
-    overflow: auto;
-}
-*/
 
 .menu ul {
     list-style-type: none;
@@ -38,10 +16,5 @@
 }
 .content {
     position: absolute;
-    left: 10px;
     width: 100%;
-}
-
-.menuShowing {
-    left: 200px;
 }

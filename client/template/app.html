@@ -1,4 +1,4 @@
-<template name="app">
+<template name="app" class="mainApp">
     {{user}}
     {{#if user}}
     <div name="header" class="header">
@@ -7,7 +7,7 @@
                 <button id="logout" class="logout">logout</button>
             </div>
     </div>
-    <div name="menu" class="menu {{menuOpen}}">
+    <div name="menu" class="menu {{menuOpen}} {{isMobile}}">
         <ul>
                 <!-- Menu Options -->
                 <li>
@@ -33,7 +33,7 @@
         </ul>
     </div>
     {{/if}}
-    <div class="route content {{menuShowing}}">
+    <div class="route content {{isMobile}}">
         {{> yield}}
     </div>
 </template>

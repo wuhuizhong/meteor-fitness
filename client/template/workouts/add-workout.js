@@ -15,7 +15,8 @@ Template.createWorkout.events({
             description: description,
             createdAt: new Date(),
             exercises: Session.get('exercises'),
-            scoredType: score
+            scoredType: score,
+            createdBy: Meteor.userId(),
         });
 
         Session.set('exercises' , []);
