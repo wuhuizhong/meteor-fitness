@@ -12,3 +12,18 @@ Template.result.helpers({
         return '' +  date.toLocaleDateString();
     }
 });
+
+Template.result.events({
+    'click .card-panel': function(event, template) {
+
+        let description = document.getElementById('description');
+
+        // switch extra content
+        if (description.className.indexOf('hidden') > 0) {
+            $(description).removeClass('hidden');
+        } else {
+            $(description).addClass('hidden');
+        }
+
+    }
+});

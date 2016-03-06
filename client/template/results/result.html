@@ -1,10 +1,14 @@
 <template name="result">
     <div class="result">
         <!-- start list -->
-        <div class="card-panel blue darken-1">
+        <div class="card-panel hoverable blue darken-1">
             <div class="card-content white-text">
-                <span class="card-image">W</span>
-                <span class="card-content">{{workout.name}}</span>
+                <span class="card-image">Workout: </span>
+                <span id="name" class="card-content">{{workout.name}}</span>
+                <span id="result" class="card-content right" >Result: {{result}}</span>
+            </div>
+            <div id="description" class="card-content hidden white-text">
+                <span class="card-content">{{workout.description}}</span>
             </div>
         </div>
     </div>
