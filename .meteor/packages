@@ -25,3 +25,4 @@ less
 twbs:bootstrap
 fourseven:scss
 fortawesome:fontawesome
+materialize:materialize

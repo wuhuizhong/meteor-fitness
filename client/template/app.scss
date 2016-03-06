@@ -23,11 +23,10 @@
         margin: 0;
         padding: 0;
 
-        button {
+        .nav-button {
           @extend %nav-button;
         }
-        display: inline;
-        margin: -4px;
+        display: inline-block;
         width: 25%;
       }
     }

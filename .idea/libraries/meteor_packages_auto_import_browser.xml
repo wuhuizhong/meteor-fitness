@@ -86,6 +86,8 @@
         <item url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/templatetag.js" />
         <item url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/compiler.js" />
         <item url="file://$USER_HOME$/.meteor/packages/spacebars/1.0.7/web.browser/spacebars-runtime.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.5/web.browser/dist/js/materialize.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.5/web.browser/dist/css/materialize.css" />
         <item url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/optimizer.js" />
         <item url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/codegen.js" />
         <item url="file://$USER_HOME$/.meteor/packages/templating-tools/1.0.0/web.browser/code-generation.js" />
@@ -242,6 +244,8 @@
       <root url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/templatetag.js" />
       <root url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/compiler.js" />
       <root url="file://$USER_HOME$/.meteor/packages/spacebars/1.0.7/web.browser/spacebars-runtime.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.5/web.browser/dist/js/materialize.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.5/web.browser/dist/css/materialize.css" />
       <root url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/optimizer.js" />
       <root url="file://$USER_HOME$/.meteor/packages/spacebars-compiler/1.0.7/web.browser/codegen.js" />
       <root url="file://$USER_HOME$/.meteor/packages/templating-tools/1.0.0/web.browser/code-generation.js" />
