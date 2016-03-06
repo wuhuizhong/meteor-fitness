@@ -16,13 +16,16 @@ Template.result.helpers({
 Template.result.events({
     'click .card-panel': function(event, template) {
 
-        let description = document.getElementById('description');
+        let description = template.$('#description');
+        let arrow = template.$('.fa-angle-right');
 
         // switch extra content
-        if (description.className.indexOf('hidden') > 0) {
-            $(description).removeClass('hidden');
+        if (description.hasClass('hidden')) {
+            arrow.css('transform' , 'rotate(90deg)');
+            description.removeClass('hidden');
         } else {
-            $(description).addClass('hidden');
+            arrow.css('transform' , 'rotate(0deg)');
+            description.addClass('hidden');
         }
 
     }

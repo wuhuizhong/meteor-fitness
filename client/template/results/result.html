@@ -2,10 +2,13 @@
     <div class="result">
         <!-- start list -->
         <div class="card-panel hoverable blue darken-1">
-            <div class="card-content white-text">
+            <div id="resultHeader" class="card-content white-text">
                 <span class="card-image">Workout: </span>
                 <span id="name" class="card-content">{{workout.name}}</span>
-                <span id="result" class="card-content right" >Result: {{result}}</span>
+                <span id="result" class="card-content" >Result: {{result}}</span>
+                <span class="card-content right" id="selectionArea">
+                    <i class="fa fa-angle-right"></i>
+                </span>
             </div>
             <div id="description" class="card-content hidden white-text">
                 <span class="card-content">{{workout.description}}</span>
