@@ -1,9 +1,9 @@
 <template name="logworkout">
     Log A Workout!
     <form>
-        <div class="workoutSelect">
-            <select id="selectWorkout" name="workout">
-                <option value="New Workout" selected>New Workout</option>
+        <div class="input-field">
+            <select id="selectedWorkout" name="workout">
+                <option value="New_Workout" selected>New Workout</option>
                 {{#each workouts}}
                     <option value="{{_id}}">{{name}}</option>
                  {{/each}}

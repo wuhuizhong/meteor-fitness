@@ -36,9 +36,12 @@
 
     position: absolute;
     margin-bottom: 60px;
-    overflow-x: auto;
     width: 100%;
 
   }
 
+}
+
+select {
+  display: block;
 }

@@ -1,17 +1,18 @@
 <template name="app">
     <div class="mainApp">
-        {{#if user}}
+        {{#if currentUser}}
         <div name="header" class="header">
             <h1 class="welcome">Fitist Log</h1>
-                <div class="user">{{user}}
-                    <button id="logout" class="logout">logout</button>
-                </div>
+            <div>
+                Welcome, {{currentUser.profile.firstName}}
+            </div>
+            <!-- <button id="logout" class="logout btn blue">Logout</button> -->
         </div>
         {{/if}}
         <div class="content {{menuShowing}}">
             {{> yield}}
         </div>
-        {{#if user}}
+        {{#if currentUser}}
         <div name="menu" class="menu">
             <ul>
                 <!-- Menu Options -->

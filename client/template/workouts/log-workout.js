@@ -55,7 +55,7 @@ Template.logworkout.events({
         // console.log('onchange');
         const workout = template.$('[name=workout]').val();
 
-        if (workout === 'New Workout') {
+        if (workout === 'New_Workout') {
             Session.set('isNewWorkout' , true);
         } else {
             Session.set('isNewWorkout' , false);

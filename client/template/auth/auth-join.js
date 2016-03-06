@@ -17,12 +17,15 @@ Template.join.helpers({
 });
 
 Template.join.events({
-        'submit #join': function(event , template) {
+        'click #join': function(event , template) {
             event.preventDefault();
+            console.log('join submit');
 
-            var email = template.$('[name=email]').val();
-            var password = template.$('[name=password]').val();
-            var confirm = template.$('[name=confirm]').val();
+            var firstName = template.$('#first_name').val();
+            var lastName = template.$('#last_name').val();
+            var email = template.$('#email').val();
+            var password = template.$('#password').val();
+            var confirm = template.$('#confirm').val();
 
             var errors = {};
 
@@ -43,10 +46,14 @@ Template.join.events({
                 return;
             }
 
+            console.log('creating users');
+
 
             Accounts.createUser({
                 email: email,
-                password: password
+                password: password,
+                profile: { firstName: firstName, lastName: lastName },
+                createdAt: new Date()
             } , function (error) {
                 if (error) {
                     return Session.set(ERRORS_KEY, {'none': error.reason});
@@ -55,6 +62,10 @@ Template.join.events({
 
             console.log('user created');
 
-            Router.go('home');
-        }
+            Router.go('/home');
+        },
+    'click #login':function (event) {
+        event.preventDefault();
+        Router.go('/login');
+    }
 });

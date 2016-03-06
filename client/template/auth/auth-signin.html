@@ -3,24 +3,28 @@
         <div class="hGroup">
             <h1>Use Fittest, Get Fitter</h1>
         </div>
-        <form>
-            <div class="input-symbol  {{errorClass 'email'}} group">
-                <input type="email" name="email"/>
-                <span class="highlight"></span><span class="bar"></span>
-                <label class="">Email</label>
+        <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
             </div>
-
-            <div class="input-symbol  {{errorClass 'password'}} group">
-                <input type="password" name="password"/>
-                <span class="highlight"></span><span class="bar"></span>
-                <label class="">Password</label>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                </div>
             </div>
-            <button type="button" id="signIn" class="button buttonBlue">Sign In
-                <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+            <button name="login" id="login" class="waves-effect waves-light btn blue">
+                Login
             </button>
-            <button type="button" id="joinRedirect" class="button buttonBlue">
+            <button name="join" id="join" class="btn waves-effect waves-light blue">
                 Join
             </button>
         </form>
+
+    </div>
     </div>
 </template>

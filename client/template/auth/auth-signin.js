@@ -18,11 +18,11 @@ Template.login.helpers({
 });
 
 Template.login.events({
-    'click #signIn': function(event, template) {
+    'click #login': function(event, template) {
         event.preventDefault();
 
-        var email = template.$('[name=email]').val();
-        var password = template.$('[name=password]').val();
+        var email = template.$('#email').val();
+        var password = template.$('#password').val();
 
         var errors = {};
 
@@ -45,44 +45,13 @@ Template.login.events({
             }
         });
 
-        Router.go('home');
+        Router.go('/home');
     },
-    'click #joinRedirect': function(event) {
+    'click #join': function(event) {
+        event.preventDefault();
         Router.go('/join');
-    },
-    'blur input': function(event, template) {
-        /* Style Selections and Helpers, keeps Titles above */
-
-        let that = $(event.target);
-
-        if (that.val()) {
-            that.addClass('used');
-        } else {
-            that.removeClass('used');
-        }
-    },
-    'click .ripples': function(event) {
-
-        console.log('Ripples');
-
-        let that = $(event.target);
-        let offset = that.parent().offset();
-        let circle = that.find('.ripplesCircle');
-
-        let x = event.pageX - offset.left;
-        let y = event.pageY - offset.top;
-
-        circle.css({
-            top: y + 'px',
-            left: x + 'px'
-        });
-
-        that.addClass('is-active');
-    },
-    '.ripples webkitAnimationEnd': function(event) {
-        let that = $(event.target);
-        that.removeClass('is-active');
     }
+
 });
 
 /* Style Selections and Helpers */

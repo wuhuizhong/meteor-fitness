@@ -23,7 +23,7 @@ Meteor.startup(function () {
 });
 Template.app.helpers({
     user: function () {
-        return Meteor.user();
+        return JSON.stringify(Meteor.user());
     }
 });
 Template.app.events({
