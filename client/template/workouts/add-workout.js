@@ -10,14 +10,16 @@ Template.createworkout.events({
         const description = template.$("[name=description]").val();
         const score = template.$("[name=score]").val();
 
-        Workouts.insert({
+        let workout = {
             name: name,
             description: description,
             createdAt: new Date(),
             exercises: Session.get('exercises'),
             scoredType: score,
             createdBy: Meteor.userId(),
-        });
+        };
+
+        Meteor.call('addWorkout' , workout);
 
         Session.set('exercises' , []);
         console.log("Created Workout");

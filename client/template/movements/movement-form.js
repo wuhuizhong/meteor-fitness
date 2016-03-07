@@ -8,12 +8,14 @@ Template.addmovement.events({
         let n = template.$('[name=name]').val();
         let t = template.$('[name=type]').val();
 
-        Movements.insert({
-           name: n,
-           createdAt: new Date(),
-           type: t,
-           createdBy: Meteor.userId()
-        });
+        let movement = {
+            name: n,
+            createdAt: new Date(),
+            type: t,
+            createdBy: Meteor.userId()
+        };
+
+        Meteor.call('addMovement' , movement);
 
         console.log('Movement Created');
     }

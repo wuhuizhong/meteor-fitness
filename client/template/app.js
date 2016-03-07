@@ -20,6 +20,10 @@ Meteor.startup(function () {
     if (Meteor.isCordova) {
         Session.set('SHOW_MENU' , false);
     }
+
+    Meteor.subscribe('workouts');
+    Meteor.subscribe('movements');
+    Meteor.subscribe('results');
 });
 Template.app.helpers({
     user: function () {
@@ -28,9 +32,11 @@ Template.app.helpers({
 });
 Template.app.events({
     'click #logout': function() {
-        Meteor.logout();
+        Meteor.logout( function(err) {
 
-        Router.go('login');
+            Router.go('login');
+        });
+
     },
     'click #goHome': function(event) {
         Router.go('home');

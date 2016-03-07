@@ -17,14 +17,17 @@ Template.logworkout.events({
             const description = template.$("[name=description]").val();
             const score = template.$("[name=score]").val();
 
-            Workouts.insert({
+            workout = {
                 name: name,
                 description: description,
                 createdAt: new Date(),
                 exercises: Session.get('exercises'),
                 scoredType: score,
                 createdBy: Meteor.userId()
-            });
+            };
+
+            Meteor.call('addWorkout', workout);
+
 
             Session.set('exercises' , []);
             console.log("Created Workout");
@@ -41,12 +44,14 @@ Template.logworkout.events({
 
         console.log(workout);
 
-        Results.insert({
+        let resultInsert = {
             workout: workout,
             createdAt: new Date(),
             result: result,
             athlete: Meteor.userId()
-        });
+        };
+
+        Meteor.call('logResult' , resultInsert);
 
         console.log('Created Result: ' , workout);
 
