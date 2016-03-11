@@ -13,3 +13,6 @@ App.icons({
     'android_hdpi': 'resources/icons/kettlebell.png',
     'android_xhdpi': 'resources/icons/kettlebell.png'
 });
+
+App.accessRule('http://*');
+App.accessRule('https://*');

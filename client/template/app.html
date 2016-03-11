@@ -2,7 +2,6 @@
     <div class="mainApp">
         {{#if currentUser}}
         <div name="header" class="header">
-            <h1 class="welcome">Fitist Log</h1>
             <div>
                 Welcome, {{currentUser.profile.firstName}}
             </div>
@@ -13,7 +12,7 @@
             {{> yield}}
         </div>
         {{#if currentUser}}
-        <div name="menu" class="menu">
+        <div name="menu" class="menu show-on-small">
             <ul>
                 <!-- Menu Options -->
                 <li>

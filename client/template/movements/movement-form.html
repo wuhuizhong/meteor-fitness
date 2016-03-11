@@ -2,9 +2,26 @@
     Movement Form
     <form name="addMovement">
         <input name="name" type="text" placeholder="Movement Name"/>
-        <input name="type" type="text" placeholder="Movement Type"/>
+        <select name="catagory" id="catagory">
+            <option selected value="monostructural">Monostructural</option>
+            <option selected value="weight-lifting">Weight Lifting</option>
+            <option selected value="gymnastics">Gymnastics</option>
+        </select>
+        <input name="exampleUrl" id="exampleUrl" type="url" placeholder="Example Video Url" required pattern="https?://.+"/>
+
+        {{#if cordova}}
+            <div id="videolink">
+                <a id="videoLink">Video of Movement</a>
+            </div>
+        {{else}}
+            <div id="player">
+
+            </div>
+        {{/if}}
+
         <button type="submit">Add Movement</button>
     </form>
+    {{exampleUrl}}
     <div class="movementList">
         {{>movementList}}
     </div>
