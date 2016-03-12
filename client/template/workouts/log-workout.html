@@ -1,20 +1,13 @@
 <template name="logworkout">
     Log A Workout!
     <form>
-        <div class="input-field">
-            <select id="selectedWorkout" name="workout">
-                <option value="New_Workout" selected>New Workout</option>
-                {{#each workouts}}
-                    <option value="{{_id}}">{{name}}</option>
-                 {{/each}}
-            </select>
-        </div>
+        <input name="workouts" type="text" class="form-control typeahead"
+               placeholder="Workout" autocomplete="off"
+               spellcheck="false" data-source="workouts" />
         {{#if newWorkout}}
             {{> workoutForm}}
         {{/if}}
         <input type="text" name="result" placeholder="Result"/>
         <button id="submitResult">Complete</button>
     </form>
-
-    {{diagnostic}}
 </template>

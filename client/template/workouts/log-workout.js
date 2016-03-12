@@ -3,6 +3,14 @@
  */
 Session.setDefault('isNewWorkout' , true);
 
+const workoutHelper = function() {
+    return C
+}
+
+Template.logworkout.rendered = function() {
+    Meteor.typeahead.inject();
+};
+
 Template.logworkout.events({
     'click #submitResult': function(event, template) {
         event.preventDefault();
@@ -73,9 +81,16 @@ Template.logworkout.helpers({
         return Session.get('isNewWorkout');
     },
     workouts : function() {
-        return Workouts.find();
+        /* typeahead results */
+        return Workouts.find().fetch().map( function(object) {
+            return {
+                id: object._id,
+                value: object.name
+            }
+        });
     },
     diagnostic : function() {
         return Session.get('exercises');
     }
 });
+
