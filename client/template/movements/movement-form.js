@@ -56,9 +56,9 @@ Template.addmovement.events({
             } else {
                 console.log('select');
                 $('#iframeVideo').attr({
-                    width: '400',
+                    width: '100%',
                     height: '300',
-                    src: url
+                    src: embedCode
                 });
             }
         }
