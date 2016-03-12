@@ -1,3 +1,20 @@
 <template name="movement">
-   Name: {{name}} , Type: {{type}}
+    <div class="movement">
+        <div class="card-panel hoverable indigo lighten-1">
+            <div id="movementHeader" class="card-content white-text">
+                <span id="catagory" class="card-content">{{catagoryIcon}}</span>
+                <span class="card-content" id="name"> {{name}}</span>
+                <span class="card-content right" id="selectionArea">
+                    <i class="fa fa-angle-right"></i>
+                </span>
+            </div>
+            <div id="extra" class="card-content hidden white-text">
+                <span class="card-content">
+                    <div id="workoutLink">
+                        Click for Movement Video Link
+                    </div>
+                </span>
+            </div>
+        </div>
+    </div>
 </template>

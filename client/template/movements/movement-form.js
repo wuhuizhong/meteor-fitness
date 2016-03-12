@@ -2,19 +2,21 @@
  * Created by Cole on 2/14/16.
  */
 
-Session.setDefault('EXAMPLE_URL' , "");
+Session.setDefault('EXAMPLE_URL', '');
 
 Template.addmovement.events({
     'submit': function(event , template) {
         event.preventDefault();
 
-        let n = template.$('[name=name]').val();
-        let t = template.$('[name=type]').val();
+        let name = template.$('[name=name]').val();
+        let catagory = template.$('[name=catagory]').val();
+        let url = template.$('#exampleUrl').val();
 
         let movement = {
-            name: n,
+            name: name,
             createdAt: new Date(),
-            type: t,
+            catagory: catagory,
+            exampleVideo: url,
             createdBy: Meteor.userId()
         };
 
