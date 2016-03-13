@@ -1,0 +1,30 @@
+.addexercise {
+
+  .exercise-header {
+    width: 100%;
+
+    display: inline-block;
+
+    .exercise {
+      display: inline-block;
+      text-align: right;
+    }
+    
+    .reps {
+      width: 3em;
+    }
+    .sets {
+      width: 3em;
+    }
+
+    .movement-name {
+      width: 10em;
+    }
+
+    .weightInput {
+      width: 4em;
+      display: inline;
+    }
+  }
+
+}
