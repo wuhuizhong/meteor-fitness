@@ -3,9 +3,6 @@
  */
 Session.setDefault('isNewWorkout' , true);
 
-const workoutHelper = function() {
-    return C
-}
 
 Template.logworkout.rendered = function() {
     Meteor.typeahead.inject();
@@ -21,12 +18,18 @@ Template.logworkout.events({
 
         /* Create Workout if new workout selected */
         if (Session.get('isNewWorkout')) {
-            const name = template.$("[name=name]").val();
+            let name = template.$("[name=name]").val();
             const description = template.$("[name=description]").val();
             const score = template.$("[name=score]").val();
 
+            if (name === null) {
+                console.log("Custom Workout");
+                name = "custom";
+            }
+
             workout = {
                 name: name,
+                verified: false,
                 description: description,
                 createdAt: new Date(),
                 exercises: Session.get('exercises'),
@@ -35,7 +38,6 @@ Template.logworkout.events({
             };
 
             Meteor.call('addWorkout', workout);
-
 
             Session.set('exercises' , []);
             console.log("Created Workout");

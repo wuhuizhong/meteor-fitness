@@ -1,6 +1,8 @@
 .tt-hint {
   color: white;
+  display: none;
 }
+
 .tt-menu {
 
   transition: box-shadow .25s;
@@ -26,4 +28,13 @@
   padding: .5em;
   font: inherit;
   border-bottom: 1px solid #2196F3 ;
+}
+
+.logworkoutHeader {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.tt-input {
+  margin-top: -21px !important;
 }

@@ -1,11 +1,20 @@
 <template name="addexercise">
-    <select id="exerciseMovement" name="exercise">
-        {{#each movements}}
-            <option value="{{name}}">{{name}}</option>
-        {{/each}}
-    </select>
-    <input id="exerciseWeight" type="number" name="weight" placeholder="Weight"/>
-    <input id="exerciseReps" type="number" name="reps" placeholder="Repitions"/>
-    <input id="exerciseDistance" type="number" name="distance" placeholder="Distance"/>
+    <div class="addexercise">
+        <div class="card-panel hoverable">
+            <span class="card-content">
+                <input name="movements" type="text" class="form-control typeahead"
+                       placeholder="Movement Name" autocomplete="off"
+                       spellcheck="false" data-source="movements" />
+                <input name="reps" class="reps" type="number" placeholder="Reps" />
+                X
+                <input name="sets" class="sets" type="number" placeholder="Sets" />
 
+            </span>
+            <span class="card-content">
+                <input class="form-control" id="exerciseWeight" type="number" name="weight" placeholder="Weight"/>
+                <!-- <input class="form-control" id="exerciseDistance" type="number" name="distance" placeholder="Distance"/> -->
+                <button id="superset" class="btn blue superSet">Super Set!</button>
+            </span>
+        </div>
+    </div>
 </template>

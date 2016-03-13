@@ -1,13 +1,28 @@
 <template name="logworkout">
-    Log A Workout!
-    <form>
-        <input name="workouts" type="text" class="form-control typeahead"
-               placeholder="Workout" autocomplete="off"
-               spellcheck="false" data-source="workouts" />
-        {{#if newWorkout}}
-            {{> workoutForm}}
-        {{/if}}
-        <input type="text" name="result" placeholder="Result"/>
-        <button id="submitResult">Complete</button>
-    </form>
+    <div class="logworkout">
+        <div class="container-fluid">
+            <div class="row logworkoutHeader">
+                Log Workout
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <form>
+                        <!-- Every Workout is unique
+						<input name="workouts" type="text" class="form-control typeahead"
+							   placeholder="Workout" autocomplete="off"
+							   spellcheck="false" data-source="workouts" />
+							   -->
+                        {{#if newWorkout}}
+                            {{> workoutForm}}
+                        {{/if}}
+                        <input type="text" name="result" placeholder="Result"/>
+                        <button id="submitResult">Complete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </template>
