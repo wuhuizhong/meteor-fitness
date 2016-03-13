@@ -1,14 +1,26 @@
 <template name="addexercise">
     <div class="addexercise">
         <div class="card-panel hoverable">
+            <span class="card-title">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                            <input name="reps" class="reps" type="number" placeholder="Reps" />
+                        </div>
+                        <div class="col-md-1 col-xs-1">
+                            X
+                        </div>
+                        <div class="col-md-5 col-xs-5">
+                            <input name="sets" class="sets" type="number" placeholder="Sets" />
+                        </div>
+                    </div>
+                </div>
+            </span>
             <span class="card-content">
                 <input name="movements" type="text" class="form-control typeahead"
                        placeholder="Movement Name" autocomplete="off"
                        spellcheck="false" data-source="movements" />
                 <input name="reps" class="reps" type="number" placeholder="Reps" />
-                X
-                <input name="sets" class="sets" type="number" placeholder="Sets" />
-
             </span>
             <span class="card-content">
                 <input class="form-control" id="exerciseWeight" type="number" name="weight" placeholder="Weight"/>
