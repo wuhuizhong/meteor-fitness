@@ -12,3 +12,69 @@ Deployment Date, March 13th
 7) Exercise collection, for pr's and shit
 6) Sets? or at least set multiplier? (ex. 3x2 @195)
 
+var workout = {
+    'sets': [ [ {movement , properties} , {movement, properties} ], [{movement, properties}] ]
+}
+
+
+workout = {
+    'sets': [ {complex , properties} , { complex , properties } ],
+    'description': "",
+    'verified': false,
+    'name': "custom",
+    createdAt: "date",
+    'type': "Completion",
+    'createdBy': Meteor.userId()
+    
+}
+
+complex = {
+    exercises: [ exercise ],
+    properties: {
+        
+    }
+}
+
+/* exercise can inherit or overide complex properties */
+exercise = {
+    movement: movement._id,
+    properties: {
+        reps: 10,
+        weight: 10,
+    }
+};
+
+var exampleWorkout = {
+    'sets': [ { complex: exampleComplex1 , properties: { reps: 10 }} , { complex: exampleComplex2 , properties: {reps: 1}}],
+    'description':"Burner",
+    'verified': true,
+    'name': 'custom',
+    'createdAt': "today",
+    'type': 'For Time',
+    'createdBy':'Andrew'
+};
+
+var exampleComplex1 = {
+    'exercises': [
+        { movement: 'Full Clean',
+          reps: 2 },
+        { movement: 'Thruster',
+          reps: 1 }
+    ],
+    'properties': {
+        reps: 10,
+        weight: 155,
+        units: 'lbs',
+    }
+}
+
+var exampleComplex2 = {
+    'exercises': [
+        {
+            'movement': 'double unders',
+            'properties': {
+                reps: 30
+            }
+        }
+    ],
+}

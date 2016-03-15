@@ -17,3 +17,4 @@ Template.addexercise.helpers({
         });
     }
 });
+
