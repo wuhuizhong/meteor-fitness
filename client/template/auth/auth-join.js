@@ -58,11 +58,12 @@ Template.join.events({
                 if (error) {
                     return Session.set(ERRORS_KEY, {'none': error.reason});
                 }
+
+                console.log('user created');
+
+                Router.go('/home');
             });
-
-            console.log('user created');
-
-            Router.go('/home');
+            
         },
     'click #login':function (event) {
         event.preventDefault();
