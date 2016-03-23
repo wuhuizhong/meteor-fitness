@@ -11,6 +11,6 @@ follow the installation steps listed here
 
 Then go into the METEOR_HOME Folder and run the command
 
-    meteor build
+    meteor
     
 This should start a web application on port :3000 with a local database setup
