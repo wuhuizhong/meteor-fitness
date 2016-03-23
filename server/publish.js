@@ -13,6 +13,9 @@ if (Meteor.isServer) {
 
         Meteor.publish('movements' , function() {
             return Movements.find();
-        })
+        });
+        Meteor.publish('complexes' , function() {
+            return Complexes.find();
+        });
     });
 }
