@@ -24,6 +24,7 @@ Meteor.startup(function () {
     Meteor.subscribe('workouts');
     Meteor.subscribe('movements');
     Meteor.subscribe('results');
+    Meteor.subscribe('complexes');
 });
 Template.app.helpers({
     user: function () {
