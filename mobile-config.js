@@ -4,7 +4,8 @@
 App.info({
     name: 'Fittist',
     description: 'A fitness logging and tracking tool. Great for crossfit, or strength and conditioning',
-    version: '0.0.1'
+    version: '0.0.1',
+    buildNumber: '100'
 });
 
 App.icons({
@@ -24,4 +25,4 @@ App.launchScreens({
 
 App.accessRule('http://*');
 App.accessRule('https://*');
-App.accessRule('*' , {launchExternal: true});
+App.accessRule('*');

@@ -39,14 +39,16 @@ Template.login.events({
             return;
         }
 
+        console.log('Login Attempt');
         Meteor.loginWithPassword( email , password , function(error) {
+            console.log('Returned');
             if (error) {
+                console.log('Error: ' , error);
                 return Session.set(ERRORS_KEY, {'none': error.reason});
             }
             Router.go('/home');
         });
 
-        Router.go('/home');
     },
     'click #join': function(event) {
         event.preventDefault();
