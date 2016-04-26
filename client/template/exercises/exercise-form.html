@@ -3,15 +3,18 @@
         <div class="card-panel hoverable">
             <span class="card-content exercise-header">
                 <div class="reps-sets">
-                    <input name="reps" class="reps" type="number" placeholder="Reps" />
-                    X
                     <input name="sets" class="sets" type="number" placeholder="Sets" />
+                    X
+                    <input name="reps" class="reps" type="number" placeholder="Reps" />
                 </div>
-                <div class="exercise">
-                    <input name="movements" type="text" class="form-control typeahead movement-name"
-                           placeholder="Movement Name" autocomplete="off"
-                           spellcheck="false" data-source="movements" />
-                    <input class="form-control weightInput" id="exerciseWeight" type="number" name="weight" placeholder="Weight"/>
+                <div id="complex" class="complex">
+                    <div class="movement">
+                        <input name="complexReps" class="complexReps" placeholder="Reps" style="display: none;">
+                        <input name="movements" type="text" class="form-control typeahead movement-name"
+                               placeholder="Movement Name" autocomplete="off"
+                               spellcheck="false" data-source="movements" />
+                        <input class="form-control weightInput" id="exerciseWeight" type="number" name="weight" placeholder="Weight"/>
+                    </div>
                 </div>
             </span>
             <span class="card-content super-set">

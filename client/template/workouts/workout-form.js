@@ -5,6 +5,10 @@
 Template.workoutForm.events({
     'click #addExercise': function(event, template) {
         event.preventDefault();
+        
+        /* Create Complex */
+        var complex = [];
+        
 
         let exercise = {};
         exercise.movement = template.$('#exerciseMovement').val();

@@ -5,7 +5,7 @@
 
     display: inline-block;
 
-    .exercise {
+    .complex {
       display: inline-block;
       text-align: right;
     }
@@ -25,6 +25,12 @@
       width: 4em;
       display: inline;
     }
+  }
+  .complexReps {
+    width: 4em;
+    display: inline-block;
+    float: left;
+    margin-right: 1em;
   }
 
 }

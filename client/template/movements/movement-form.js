@@ -14,6 +14,7 @@ Template.addmovement.events({
 
         let movement = {
             name: name,
+            verified: false,
             createdAt: new Date(),
             catagory: catagory,
             exampleVideo: url,
