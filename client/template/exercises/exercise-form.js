@@ -3,6 +3,7 @@
  */
 
 Session.setDefault('isComplex' , false);
+Session.setDefault('sets' , [{}]);
 
 Template.addexercise.rendered = function() {
     Meteor.typeahead.inject();
@@ -20,6 +21,10 @@ Template.addexercise.helpers({
     },
     complex: function() {
         return 'Complex';
+    },
+    set: function() {
+        /* No simple iteration method */
+        return Session.get('sets');
     }
 });
 
@@ -136,6 +141,19 @@ Template.addexercise.events({
         }
 
         Session.set('isComplex' , false);
+    },
+    'change .sets': function(event, template) {
+        event.preventDefault();
+        var num = template.$('.sets').val();
+        var i = 1, sets = [{}];
+
+        if (num !== null || num !== undefined || num !== '') {
+            while (i < num) {
+                sets.push({});
+                i++;
+            }
+        }
+        Session.set('sets' , sets);
     }
 });
 

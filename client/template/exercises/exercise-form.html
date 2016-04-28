@@ -1,11 +1,15 @@
 <template name="addexercise">
     <div class="addexercise">
+        {{set}}
         <div class="card-panel hoverable">
             <span class="card-content exercise-header">
                 <div class="reps-sets">
                     <input name="sets" class="sets" type="number" placeholder="Sets" />
                     X
                     <input name="reps" class="reps" type="number" placeholder="Reps" />
+                    {{#each set}}
+                    <input class="form-control weightInput" id="exerciseWeight" type="number" name="weight" placeholder="Weight"/>
+                    {{/each}}
                 </div>
                 <div id="complex" class="complex">
                     <div class="movement">
@@ -13,7 +17,6 @@
                         <input name="movements" type="text" class="form-control typeahead movement-name"
                                placeholder="Movement Name" autocomplete="off"
                                spellcheck="false" data-source="movements" />
-                        <input class="form-control weightInput" id="exerciseWeight" type="number" name="weight" placeholder="Weight"/>
                     </div>
                 </div>
             </span>
