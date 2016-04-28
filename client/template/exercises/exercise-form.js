@@ -88,7 +88,18 @@ Template.addexercise.events({
             console.log(name);
 
             /* Assume movement already exists */
-            var m = Movements.findOne({name: name});
+            var m;
+            try {
+                m = Movements.findOne({name: name});
+            } catch (e) {
+                console.log('Movement Does Not Exist' , e);
+            }
+
+            /* Catch undefined */
+            if (m === undefined) {
+                console.log('Movement is Undefined');
+                return;
+            }
 
             /* Need to rethink how to put multiple movements in complex */
             for (var j = 0; j < reps; j++) {
@@ -98,17 +109,33 @@ Template.addexercise.events({
         }
 
         /* Add weight to complex */
-        complex.properties.weight = document.querySelector('[name=weight]').value;
+        let weight = document.querySelector('[name=weight]').value;
+
+        /* Add sets and reps */
+        complex.properties.reps = document.querySelector('[name=reps]').value;
 
         /* Add complex to complex list */
-        // Meteor.call('addComplex' , complex);
+        Meteor.call('addComplex' , complex);
+        /* Sets is not a property of a complex */
+        let sets = document.querySelector('[name=sets]').value;
 
         /* Add Complex to exercise list */
         let exercises = Session.get('exercises');
-        exercises.push(complex);
-        console.log(exercises);
+        exercises.push({complex: complex, sets: sets, weight: weight});
+        console.log('exercises' , exercises);
         Session.set('exercises' , exercises);
-        console.log('setexercises');
+
+        /* Skip the first one, but remove others, reset to non-complex exercise */
+        if (Session.get('isComplex')) {
+            var complexNode = document.querySelector('.complex');
+            for (var i = 1; i < movements.length; i++) {
+                console.log('removing', movements[i]);
+                complexNode.removeChild(movements[i]);
+            }
+            document.querySelector('.movement').removeChild(document.querySelector('.complexReps'));
+        }
+
+        Session.set('isComplex' , false);
     }
 });
 

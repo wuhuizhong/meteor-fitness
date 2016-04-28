@@ -4,8 +4,8 @@
 App.info({
     name: 'Fittist',
     description: 'A fitness logging and tracking tool. Great for crossfit, or strength and conditioning',
-    version: '0.0.1',
-    buildNumber: '100'
+    version: '0.1.0',
+    buildNumber: '101'
 });
 
 App.icons({

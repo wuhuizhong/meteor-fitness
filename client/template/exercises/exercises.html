@@ -1,4 +1,6 @@
 <template name="exercise">
 <!-- New form is a complex not an exercise, might have to rename -->
-    Complex
+    {{#each complex.movements}}
+        {{name}}
+    {{/each}}
 </template>
