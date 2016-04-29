@@ -114,7 +114,7 @@ Template.addexercise.events({
         }
 
         /* Add weight to complex */
-        let weight = document.querySelector('[name=weight]').value;
+        let weights = document.querySelectorAll('[name=weight]');
 
         /* Add sets and reps */
         complex.properties.reps = document.querySelector('[name=reps]').value;
@@ -126,7 +126,11 @@ Template.addexercise.events({
 
         /* Add Complex to exercise list */
         let exercises = Session.get('exercises');
-        exercises.push({complex: complex, sets: sets, weight: weight});
+        /* Add individual complexes with different weights */
+        for (var i = 0; i < weights.length; i++) {
+            exercises.push({complex: complex, weight: weights[i].value});
+        }
+
         console.log('exercises' , exercises);
         Session.set('exercises' , exercises);
 
