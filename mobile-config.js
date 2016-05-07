@@ -4,8 +4,12 @@
 App.info({
     name: 'Fittist',
     description: 'A fitness logging and tracking tool. Great for crossfit, or strength and conditioning',
-    version: '0.1.0',
-    buildNumber: '101'
+    version: '0.1.1',
+    buildNumber: '102',
+    id: 'com.fittist.log',
+    author: 'Andrew Cole',
+    email: 'andrew.thielcole@gmail.com',
+    website: 'www.fittistlog.com'
 });
 
 App.icons({
