@@ -11,8 +11,9 @@ Template.result.helpers({
 
         return '' +  date.toLocaleDateString();
     },
-    findUserName: function (id) {
-        var user = Meteor.users.findOne(id);
+    findUser: function (id) {
+        var user = Meteor.users.findOne({_id: id});
+        console.log(user);
         return user;
     }
 });

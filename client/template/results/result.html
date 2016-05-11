@@ -1,18 +1,20 @@
 <template name="result">
     {{diagnostic}}
-    {{findUserName athlete}}
     <div class="result">
         <!-- start list -->
         <div class="card-panel hoverable white darken-1">
-            <div id="resultHeader" class="card-content white-text">
-                <span class="card-image">Workout: </span>
-                <span id="name" class="card-content">{{workout.name}}</span>
-                <span id="result" class="card-content" >Result: {{result}}</span>
-                <span class="card-content right" id="selectionArea">
-                    <i class="fa fa-angle-right"></i>
-                </span>
+            <div id="resultHeader" class="card-content">
+                <span class="card-content">
+                    {{#with findUser athlete}}
+                        {{profile.photo}} {{profile.firstName}} {{profile.lastName}}
+                    {{/with}}
+                </span><br>
+                <span class="card-content">{{dateFormater createdAt}} - {{workout.name}}</span>
             </div>
-            <div id="description" class="card-content hidden white-text">
+            <div id="workout-content" class="card-content">
+                {{> workout workout}}
+            </div>
+            <div id="description" class="card-content hidden">
                 <span class="card-content">{{workout.description}}</span>
             </div>
         </div>

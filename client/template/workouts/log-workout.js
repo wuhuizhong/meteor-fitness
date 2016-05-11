@@ -17,7 +17,6 @@ Template.logworkout.events({
         let workout;
 
         /* Create Workout if new workout selected */
-        if (Session.get('isNewWorkout')) {
             let name = template.$("[name=name]").val();
             const description = template.$("[name=description]").val();
             const score = template.$("[name=score]").val();
@@ -37,33 +36,34 @@ Template.logworkout.events({
                 createdBy: Meteor.userId()
             };
 
-            Meteor.call('addWorkout', workout);
+            /* create workout or find an already created workout */
+            Meteor.call('addWorkout', workout , function( error , id) {
+                /* Now I have the id */
+                var workoutId = id;
 
-            Session.set('exercises' , []);
-            console.log("Created Workout");
+                Session.set('exercises' , []);
+                console.log("Created Workout");
 
-            // Should probably set by id returned by insert
-            workout = Workouts.findOne({name: name});
+                // Should probably set by id returned by insert
+                workout = Workouts.findOne({_id: workoutId});
 
-        } else {
-            const n = template.$('[name=workout]').val();
-            workout = Workouts.findOne({name: n});
-        }
-        /* Maybe use event.target instead of template jquery selection */
-        const result = template.$('[name=result]').val();
+                /* Maybe use event.target instead of template jquery selection */
+                const result = template.$('[name=result]').val();
 
-        console.log(workout);
+                console.log(workout);
 
-        let resultInsert = {
-            workout: workout,
-            createdAt: new Date(),
-            result: result,
-            athlete: Meteor.userId()
-        };
+                let resultInsert = {
+                    workout: workout,
+                    createdAt: new Date(),
+                    result: result,
+                    athlete: Meteor.userId()
+                };
 
-        Meteor.call('logResult' , resultInsert);
+                Meteor.call('logResult' , resultInsert);
 
-        console.log('Created Result: ' , workout);
+                console.log('Created Result: ' , workout);
+
+            });
 
     },
     'change #selectWorkout': function(event, template) {
