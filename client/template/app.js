@@ -25,6 +25,7 @@ Meteor.startup(function () {
     Meteor.subscribe('movements');
     Meteor.subscribe('results');
     Meteor.subscribe('complexes');
+    Meteor.subscribe('allUsers');
 });
 Template.app.helpers({
     user: function () {

@@ -5,16 +5,8 @@
         <div class="row navHeader">
             Home
         </div>
-        <div class="row">
-            <div class="resultList col-md-4">
-                {{> resultList}}
-            </div>
-            <div class="workoutList col-md-4">
-                {{> workoutList}}
-            </div>
-            <div class="movementList col-md-4">
-                {{> movementList}}
-            </div>
-        </div>
+        {{#each results}}
+            {{> result}}
+        {{/each}}
     </div>
 </template>

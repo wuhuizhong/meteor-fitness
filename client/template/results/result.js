@@ -10,6 +10,10 @@ Template.result.helpers({
         let date = new Date(this.createdAt);
 
         return '' +  date.toLocaleDateString();
+    },
+    findUserName: function (id) {
+        var user = Meteor.users.findOne(id);
+        return user;
     }
 });
 
